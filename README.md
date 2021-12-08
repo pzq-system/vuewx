@@ -1,1 +1,1 @@
-# vue-Wx
+# vuewx
