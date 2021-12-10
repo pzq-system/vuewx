@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div>
     <van-swipe :autoplay="3000">
       <van-swipe-item v-for="(image, index) in images" :key="index">
         <img v-lazy="image" />
@@ -7,7 +7,7 @@
     </van-swipe>
     <div class="content">
       <van-row>
-        <van-col span="8">
+        <van-col span="8" @click="$router.push('/clxxlr')">
           <div class="cell">
             <div class="cell-img"><img src="../assets/image/cllr.png" /></div>
             <div><span>车辆录入</span></div>
@@ -61,14 +61,10 @@
         >
       </van-row>
     </div>
-    <p>1234</p>
   </div>
 </template>
-
 <script>
 export default {
-  name: 'Home',
-  components: {},
   data () {
     return {
       images: [
@@ -79,7 +75,8 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+
+<style lang="scss" scoped>
 .van-swipe .van-swipe-item {
   color: #fff;
   font-size: 20px;
